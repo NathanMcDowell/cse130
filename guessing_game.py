@@ -6,16 +6,20 @@ def main():
     print(f"Try to guess a number between 1 and {high_number}")
     user_number = 0
     guesses_remaining = 3
-    while user_number != target_number and guesses_remaining > 1:
+    while user_number != target_number and guesses_remaining > 0:
         try:
             user_number = int(input("> "))
             if user_number == target_number:
                 print("Congratulations! You got the number.")
             elif user_number > target_number:
-                print("Too high!")
-                
+                guesses_remaining -= 1
+                print(f"Too high! You have {guesses_remaining} guesses left.")
             elif user_number < target_number:
-                print("Too low!")
+                guesses_remaining -= 1
+                print(f"Too low! You have {guesses_remaining} guesses left.")
+            if guesses_remaining <= 0:
+                print("You are out of guesses!")
+                print(f"The number was {target_number}")
         except ValueError:
             print("Please give an integer.")
         
