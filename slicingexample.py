@@ -13,5 +13,3 @@ my_friend = {
 with open("JSON_example.json", "wt") as file_handle:
     json_data = json.dumps(my_friend)
     file_handle.write(json_data)
-
-with open()

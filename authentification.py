@@ -12,15 +12,26 @@
 import json
 
 def main():
-    with open("Lab02.json", "rt") as filehandle:
+    with open("Lab02.json", "rt") as filehandle: # Pulls the data from a json file to make a list
         data = json.load(filehandle)
+    username_attempt = "0"
+    password_attempt = "0"
 
-    user_input = ""
-    while user_input != "q":
+    while username_attempt != "q" and password_attempt != "q":
+        authenticated = False
         username_attempt = input("Username: ")
-        # password_attempt = input("Password: ")
-        for i in data["password"]:
-            print(i)
+        password_attempt = input("Password: ")
+        print()
+        for username in data["username"]: # Runs through every item in the username list to see if it is there.
+            if username_attempt == username: # If it is:
+                for password in data["password"]: # Check the password list to see if the password is there.
+                    if password_attempt == password: # If it is:
+                        if data["username"].index(username_attempt) == data["password"].index(password_attempt): # Check if the username and password share the same index.
+                            print("You are authenticated!")
+                            authenticated = True
+                break # Break out of the loop so that you don't run the program more than needed.
+        if authenticated == False:
+            print("You are not authorized to use the system.")
 
 
 main()
