@@ -3,11 +3,15 @@
 # 2. Assignment Name:
 #      Lab 02: Authentication
 # 3. Assignment Description:
-#      -describe what this program is meant to do-
+#      This project is meant to check if the user-entered username and password are in the system and correct.
 # 4. What was the hardest part? Be as specific as possible.
-#      -a paragraph or two about how the assignment went for you-
+#      The hardest part of this assignment was figuring out how to confirm that the password was the correct one for the given 
+#       username.Another hard part was a bug that kept returning "unauthorized" even if everything was correct. I figured out that 
+#       the problem was that while moving a line of code I had unindented the break keyword. This meant the loop only ran once and
+#       and would only work if the user-entered username was the first item on the list. I solved it by going into debug mode and 
+#       seeing that the loop was only ever running once.
 # 5. How long did it take for you to complete the assignment?
-#      -total time in hours including reading the assignment and submitting the program-
+#      It took me 1 hour and 45 minutes to complete this assignment.
 
 import json
 
