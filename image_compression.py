@@ -5,7 +5,7 @@
 # 3. Assignment Description:
 #      This program reads a compressed image from a file and prints the image.
 # 4. Algorithmic Efficiency
-#      The efficiency is O(n + m) because it linearly gets bigger as the input value gets bigger, and there are two input values.
+#      The efficiency is O(n * m) because there are to two input values that increase the run time exponentially as they both increase.
 # 5. What was the hardest part? Be as specific as possible.
 #      The hardest part was figuring out the O notation since it input two values. I did
 #       a bit of research and I was able to figure it out.
