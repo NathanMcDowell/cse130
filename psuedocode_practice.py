@@ -2,6 +2,11 @@ list = [91, 7, 101, 6, 33, 19, 1, 0]
 count = len(list)
 done = False
 
+test_string_1 = "5"
+test_string_2 = "40"
+if test_string_1 > test_string_2:
+    print("1 greater than 2")
+
 # while done == False:
 #     for i in range(0, count, 0, -1):
 #         for 
@@ -115,3 +120,21 @@ levelUp()
         PUT must be level 2 first
 '''
 
+'''
+INPUT list
+length <- LENGTH(list)
+solved <- 0
+
+FOR EACH IN list
+    largest <- 0
+    FOR i FROM 0 TO (length - solved)
+        if list[i] > largest
+            largest <- list[i]
+            index_to_change <- i
+    old_number <- list[length - solved]
+    list[length - solved] <- largest
+    list[index_to_change] <- old_number
+    solved <- solved + 1
+
+
+'''
